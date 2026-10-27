@@ -5,6 +5,8 @@ import UnitComparison from "./pages/UnitComparison"
 import UnitSearch from "./pages/UnitSearch"
 import Header from "./components/Header"
 import { useState, useEffect } from 'react'
+import Spinner from 'react-bootstrap/Spinner'
+import Alert from 'react-bootstrap/Alert'
 
 const URL = 'https://openhammer-api-production.up.railway.app'
 
@@ -34,6 +36,20 @@ function App() {
   useEffect(() => {
   console.log(factionNames)
 }, [factionNames])
+
+  if (loading) return (
+    <div>
+      <Spinner>
+        <span className='visually-hidden'>Loading...</span>
+      </Spinner>
+    </div>
+  )
+
+  if (error) return (
+    <Alert>
+      {error}
+    </Alert>
+  )
   
   return (
     <div>
