@@ -12,7 +12,7 @@ function Header(props) {
     return (
         <Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand onClick={changeEdition}>40K / {props.edition} (change edition)</Navbar.Brand>
+        <Navbar.Brand onClick={changeEdition}>40K / {props.edition}: Click to change</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

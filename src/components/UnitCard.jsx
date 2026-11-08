@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card'
 
-function UnitCard() {
+function UnitCard(props) {
     return(
         <Card border ='light' bg='dark' text='white'>
             <Card.Header>Header</Card.Header>
