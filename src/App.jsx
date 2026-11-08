@@ -52,7 +52,7 @@ function App() {
     <div>
     <HashRouter>
 
-      <Header />
+      <Header edition={edition} setEdition={setEdition}/>
       
       <Routes>
         <Route path="/" element={<FactionDetails factionInfo={factionInfo}/>} />
