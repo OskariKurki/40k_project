@@ -1,4 +1,8 @@
+import UnitCard from '../components/UnitCard'
+
 function UnitSearch() {
-    return <p>Unit search</p>
+    return <div>
+        <UnitCard/>
+    </div>
 }
 export default UnitSearch
