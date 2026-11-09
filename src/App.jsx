@@ -57,7 +57,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FactionDetails factionInfo={factionInfo}/>} />
         <Route path="/Comparison" element={<UnitComparison />} />
-        <Route path="/Search" element={<UnitSearch factionInfo={factionInfo}/>} />
+        <Route path="/Search" element={<UnitSearch factionInfo={factionInfo} loading={loading} setLoading={setLoading} error={error} setError={setError} url={URL} edition={edition}/>} />
       </Routes>
     </HashRouter>
     </div>
