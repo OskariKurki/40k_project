@@ -1,11 +1,10 @@
 import Dropdown from 'react-bootstrap/Dropdown'
-import DropdownButton from 'react-bootstrap/DropdownButton'
 
 function Factions(props) {
 
     return (
         <Dropdown>
-            <Dropdown.Toggle variant="secondary" className="w-100">
+            <Dropdown.Toggle variant="primary" className="w-100">
                 {props.name}
             </Dropdown.Toggle>
 

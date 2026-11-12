@@ -28,14 +28,26 @@ rm.set("Titans", "https://assets.warhammer-community.com/eng_22-07_warhammer_40,
 function Rules(){
     return(
         <div>
-            {[...rm].map(([faction, url], i) => (
-                <Card key={i} bg='dark' text='light'>
-                    <Card.Body>
-                        <Card.Title>{faction} specific rules</Card.Title>
-                        <Button variant='danger' href={url}>PDF</Button>
-                    </Card.Body>
-                </Card>
-            ))}
+            <div>
+            <Card bg='dark' text='light' >
+                <Card.Body>
+                    <Card.Title>Core rules</Card.Title>
+                    <Button variant='danger' href="https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf"> Core rules: PDF</Button>
+                </Card.Body>
+            </Card>
+            </div>
+            <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                {[...rm].map(([faction, url], i) => (
+                    <div className='col' key={i}>
+                        <Card bg='dark' text='light' className='h-100'>
+                            <Card.Body>
+                                <Card.Title>{faction} specific rules</Card.Title>
+                                <Button variant='danger' href={url}>PDF</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
