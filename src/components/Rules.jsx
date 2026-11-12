@@ -28,11 +28,11 @@ rm.set("Titans", "https://assets.warhammer-community.com/eng_22-07_warhammer_40,
 function Rules(){
     return(
         <div>
-            {[...rm].map(([faction, url]) => (
-                <Card key={faction}>
+            {[...rm].map(([faction, url], i) => (
+                <Card key={i} bg='dark' text='light'>
                     <Card.Body>
                         <Card.Title>{faction} specific rules</Card.Title>
-                        <Button variant='Danger' href={url}>PDF</Button>
+                        <Button variant='danger' href={url}>PDF</Button>
                     </Card.Body>
                 </Card>
             ))}

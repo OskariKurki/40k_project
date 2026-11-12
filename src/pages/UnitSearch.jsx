@@ -21,7 +21,7 @@ function UnitSearch(props) {
             </div>
             <div className='col-12 col-lg-8'>
                 {units.map((unit, i)=> 
-                <UnitCard id={i} 
+                <UnitCard key={i} 
                 name={unit.name} 
                 faction={unit.faction} 
                 type={unit.type} 
