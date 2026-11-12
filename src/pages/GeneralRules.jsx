@@ -1,4 +1,4 @@
 function UnitComparison() {
-    return <p>Unit comparisons</p>
+    return <p>Rules</p>
 }
 export default UnitComparison

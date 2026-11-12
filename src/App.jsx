@@ -1,7 +1,7 @@
 import './App.css'
 import { HashRouter, Route, Routes } from "react-router-dom";
 import FactionDetails from "./pages/FactionDetails"
-import UnitComparison from "./pages/UnitComparison"
+import GeneralRules from "./pages/GeneralRules"
 import UnitSearch from "./pages/UnitSearch"
 import Header from "./components/Header"
 import { useState, useEffect } from 'react'
@@ -56,8 +56,8 @@ function App() {
       
       <Routes>
         <Route path="/" element={<FactionDetails factionInfo={factionInfo}/>} />
-        <Route path="/Comparison" element={<UnitComparison />} />
         <Route path="/Search" element={<UnitSearch factionInfo={factionInfo} loading={loading} setLoading={setLoading} error={error} setError={setError} url={URL} edition={edition}/>} />
+        <Route path="/Rules" element={<GeneralRules />} />
       </Routes>
     </HashRouter>
     </div>

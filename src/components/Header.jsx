@@ -17,8 +17,8 @@ function Header(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/">Factions</Nav.Link>
-            <Nav.Link as={NavLink} to="/Comparison">Unit Comparisons</Nav.Link>
             <Nav.Link as={NavLink} to="/Search">Unit search</Nav.Link>
+            <Nav.Link as={NavLink} to="/Rules">General rules</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
