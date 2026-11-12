@@ -9,7 +9,9 @@ function UnitCard(props) {
                 <Card.Text>Faction type: {props.faction_type}</Card.Text>
                 <Card.Text>Base points: {props.base_points}</Card.Text>
                 <Card.Text>Invulnerable saves: {props.invul}</Card.Text>
-                <Card.Text style={{whiteSpace: 'pre-line'}}>Abilities: {props.abilities.map(ability => (`${ability.name} || ${ability.description} \n `))}</Card.Text>
+                <Card.Text style={{whiteSpace: 'pre-line'}}>
+                    Abilities: {props.abilities.map(ability => (`${ability.name} || ${ability.description} \n `))}
+                </Card.Text>
             </Card.Body>
         </Card>
     )

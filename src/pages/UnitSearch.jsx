@@ -8,17 +8,29 @@ function UnitSearch(props) {
 
     return <div className='container'>
         <div className='row g-2'>
-            <SearchBar setUnits={setUnits} factionInfo={props.factionInfo} error={props.error} setError={props.setError} loading={props.loading} setLoading={props.setLoading} url={props.url} edition={props.edition}/>
-            {units.map((unit, i)=> 
-            <UnitCard id={i} 
-            name={unit.name} 
-            faction={unit.faction} 
-            type={unit.type} 
-            faction_type={unit.faction_type}
-            base_points={unit.points.base}
-            invul={unit.invuln_save}
-            abilities={unit.abilities}
-            />)}
+            <div className='col-12 col-lg-4'>
+                <SearchBar 
+                setUnits={setUnits} 
+                factionInfo={props.factionInfo} 
+                error={props.error} 
+                setError={props.setError} 
+                loading={props.loading} 
+                setLoading={props.setLoading} 
+                url={props.url} 
+                edition={props.edition}/>
+            </div>
+            <div className='col-12 col-lg-8'>
+                {units.map((unit, i)=> 
+                <UnitCard id={i} 
+                name={unit.name} 
+                faction={unit.faction} 
+                type={unit.type} 
+                faction_type={unit.faction_type}
+                base_points={unit.points.base}
+                invul={unit.invuln_save}
+                abilities={unit.abilities}
+                />)}
+            </div>
         </div>
     </div>
 }

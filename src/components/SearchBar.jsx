@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 import {useState, useEffect} from 'react'
 import Spinner from 'react-bootstrap/Spinner'
 import Alert from 'react-bootstrap/Alert'
+import { InputGroup } from 'react-bootstrap'
 
 function SearchBar(props) {
     const [faction, setFaction] = useState('')
@@ -61,10 +62,12 @@ function SearchBar(props) {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <input name='query' />
-            <Button type='submit'>
-                search
-            </Button>
+            <InputGroup>
+                <Form.Control name='query' type='text' placeholder='Search units' className='mb-2'/>
+                <Button type='submit'>
+                    search
+                </Button>
+            </InputGroup>
             <Form.Select
                 id='choice'
                 value={faction}
