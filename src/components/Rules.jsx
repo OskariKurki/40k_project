@@ -1,4 +1,5 @@
-
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 
 const rm = new Map()
 rm.set("Genestealer Cults", "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_genestealer_cults-vmkwgeydbr-sh7picbeqo.pdf")
@@ -24,3 +25,19 @@ rm.set("Imperial Knights", "https://assets.warhammer-community.com/eng_wh40k_fac
 rm.set("T'au Empire", "https://assets.warhammer-community.com/eng_wh40k_faction_pack_tau_empire-sxhzmfrlud-mpzjzuhupn.pdf")
 rm.set("Titans", "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_adeptus_titanicus-pkhrobh6xn-nmtoszeaxw.pdf")
 
+function Rules(){
+    return(
+        <div>
+            {[...rm].map(([faction, url]) => (
+                <Card key={faction}>
+                    <Card.Body>
+                        <Card.Title>{faction} specific rules</Card.Title>
+                        <Button variant='Danger' href={url}>PDF</Button>
+                    </Card.Body>
+                </Card>
+            ))}
+        </div>
+    )
+}
+
+export default Rules

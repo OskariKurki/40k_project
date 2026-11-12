@@ -1,4 +1,6 @@
+import Rules from '../components/Rules'
+
 function UnitComparison() {
-    return <p>Rules</p>
+    return <Rules/>
 }
 export default UnitComparison
